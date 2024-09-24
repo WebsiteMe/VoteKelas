@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wong seng ga mbok senengi nek kelas</title>
+    <style>
+        /* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+select, input {
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.divider {
+    height: 2px;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    select, input, button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    select, input, button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plih Wong Seng Ga Mbok Senengi Nek Kelas</h1>
+        <form id="votingForm" class="form">
+            <label for="absen">Pilih Nama:</label>
+            <select id="absen" required>
+                <option value="">Pilih Nama</option>
+                <!-- Menambahkan 40 absen -->
+                <script>
+                    const students = [
+                        "ADILLA NAZHRIL AHMAD",
+                        "AHMAD NUR FALAHUL MUTTAQIN",
+                        "AHMAD SYEH BUDIN",
+                        "AKMAL AZHARIA ZALFA",
+                        "ALMIRA MEYTA ANISA KIRANA",
+                        "AMIR FAISAL ANNAFI",
+                        "ANDHIKA RIZKY MAULANA PUTRA",
+                        "ANDHINI MAYANG SARI",
+                        "ANINDYA ARIN RAHMAHDANI",
+                        "ARIN AYUNING TYAS",
+                        "BAGUS ARYA LAKSANA",
+                        "BINTANG ANGARA KUSUMA",
+                        "CANDRAKA DEWI PUSPITA",
+                        "CELIN CHIQUITTA CANDY CAROLINE",
+                        "DJANITA AIRA DIYASTUTI",
+                        "ELIZA NUR AZIZAH",
+                        "FARAHDIYAH NUR NATASYA",
+                        "HANDIKA GALANG WICAKSONO",
+                        "HAYDAR JAFRAN MULTAZAM",
+                        "INDRI DWI JULYANTI",
+                        "INEZ AYU AGUSTIN",
+                        "LUCKY FRANZACKY",
+                        "MEVITA BUNGA CANTIKA",
+                        "MERLINDA ZAHROTU NUR SITA",
+                        "MUHAMMAD RICO RAMADHANI",
+                        "MUHAMMAD YUSRIL ANWAR",
+                        "NABELLA DIAN SAPUTRI",
+                        "NADIV PRIAYUNINDHA",
+                        "NIKEN AYU LARASATI",
+                        "NOVAL TAUFIQ ARJUNANTA",
+                        "RAKA ILHAM NARENDRA TAMA",
+                        "RAYES PURWANTO",
+                        "RENITA OKTAVIA YUMAIRAH",
+                        "RERE SULISTYO",
+                        "SELFI NIKMATUL KHOIROH",
+                        "SHERIL ANAYA KIRANIA",
+                        "SHERLY MIFTKHUL JANNAH",
+                        "SHILA MAULANI",
+                        "STEVANNY NAJA NOVELICA FELOVE",
+                        "YUDHA JULIANTO"
+                    ];
+
+                    for (let i = 0; i < students.length; i++) {
+                        document.write(`<option value="${i + 1}">Absen ${i + 1}: ${students[i]}</option>`);
+                    }
+                </script>
+            </select>
+            <button type="submit">Vote</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <form id="passwordForm" class="form">
+            <label for="password">Masukkan Sandi untuk Melihat Hasil:</label>
+            <input type="password" id="password" placeholder="Masukkan sandi" required>
+            <button type="submit">Lihat Hasil</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
